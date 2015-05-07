@@ -137,7 +137,7 @@ void param_check(int argc, char **argv, map<string, string> &params) {
     int ch;
     opterr = 0;
     
-    while((ch = getopt(argc, argv, "e:i:b:s:p:v:f:t:d::o::c::a::")) != -1) {
+    while((ch = getopt(argc, argv, "e:i:b:s:p:v:f:t:d::o::c::a::k::")) != -1) {
         switch(ch) {
             case 'e': case 'i': case 'b': case 's': case 'p':
             case 'v': case 'f': case 't': case 'd': case 'o':
