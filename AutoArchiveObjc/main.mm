@@ -22,7 +22,7 @@
 using namespace std;
 
 map<string, string> params;
-string empty_param = "empty";
+static const string empty_param = "empty";
 
 //com.ehis.healthpush
 NSString *key_identifier = @"CFBundleIdentifier";
@@ -43,7 +43,7 @@ void str_replace(string &strBase, string strSrc, string strDes)
     while ((pos != string::npos))
     {
         strBase.replace(pos, srcLen, strDes);
-        pos=strBase.find(strSrc, (pos+desLen));
+        pos=strBase.find(strSrc, (pos + desLen));
     }
 }
 
@@ -118,8 +118,7 @@ void fix() {
         exit(1);
     }
     
-    NSLog(@"开始修改环境 YLUrl.h   待做!!!!!!!!!!!!!");
-    
+    NSLog(@"开始修改环境 YLUrl.h   TODO!!!!!!!!!!!!!");
     
     NSString *evn = [NSString stringWithUTF8String:params["e"].c_str()];
     if ([evn isEqualToString:@"PRD"] || [evn isEqualToString:@"STG1"] || [evn isEqualToString:@"STG2"]) {
